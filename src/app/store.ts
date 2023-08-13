@@ -1,7 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { langSlice } from 'entities/lang';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    lang: langSlice.reducer,
+  },
 });
 
 export type AppDispatch = typeof store.dispatch;
